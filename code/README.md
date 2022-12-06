@@ -20,7 +20,7 @@
 | Latitude               	| float    	| `spray.csv`              	| Latitude of spray                                                                       	|
 | Longitude              	| float    	| `spray.csv`              	| Longitude of spray                                                                      	|
 | Station                	| int      	| `weather.csv`            	| Refers to the weather station (1 or 2)                                                  	|
-| Date                   	| datetime 	| `weather.csv`            	| Refers to the date of measurement                                                       	|
+| Date                   	| object   	| `weather.csv`            	| Refers to the date of measurement                                                       	|
 | Tmax                   	| int      	| `weather.csv`            	| Maximum daily temperature (Degrees Fahrenheit)                                          	|
 | Tmin                   	| int      	| `weather.csv`            	| Minimum daily temperature (Degrees Fahrenheit)                                          	|
 | Tavg                   	| object   	| `weather.csv`            	| Average daily temperature (Degrees Fahrenheit)                                          	|
