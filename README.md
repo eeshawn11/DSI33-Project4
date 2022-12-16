@@ -1,8 +1,8 @@
 # West Nile Virus Analysis & Prediction
----
+
 
 ## Executive Summary
----
+
 West Nile virus (WNV) is the leading cause of mosquito-borne disease in the US, and it is spread to people by the bite of an infected mosquito, specifically a Culex pipiens mosquito. One in five infected people with WNV would experience fever, nausea, headache and muscle aches lasting from a few days to a few weeks - while the remaining four out of five would not exhibit any symptoms. To date, the virus remains a major concern as individuals with weaker immune systems and those above 60 are at higher risk for severe illness from WNV - raking up medical costs and creating more burden in the healthcare system. 
 
 Every year the Chicago Department of Public Health (CDPH) runs a comprehensive surveillance program in suburban areas to trap mosquitoes and test them for WNV. This data has helped CDPH target high-risk areas for the virus and significantly reduce the number of positive cases in the last few years. ([source](https://www.chicago.gov/city/en/depts/cdph/provdrs/healthy_communities/news/2022/september/first-human-case-of-west-nile-virus-detected-in-chicago-in-2022.html))
@@ -15,7 +15,7 @@ Our team at the Disease and Treatment Agency was tasked to analyze the years wit
 To build a model with more than 70% recall to predict the period and location where mosquitoes will test positive for WNV, enabling CDPH to preemptively allocate the city’s spraying resources to curb the virus transmission.
 
 ## Content
----
+
 - [Part 1: Data Cleaning](Part_1_WNV_Cleaning.ipynb)
 - [Part 2: Exploratory Data Analysis](Part_2_WNV_EDA.ipynb)
 - [Part 3: Modeling & Tuning](Part_3_WNV_Modeling.ipynb)
@@ -23,7 +23,7 @@ To build a model with more than 70% recall to predict the period and location wh
 
 
 ## About the datasets
----
+
 - [`train.csv`](../assets/train.csv): This is the main dataset we'll be working with, which contains 10,506 observations on the presence of West Nile Virus across neighborhood clusters in Chicago, Illinois. This dataset is taken from the years 2007, 2009, 2011 and 2013. There are a total of 11 variables involved in tracking the West Nile Virus in the neighborhoods.
 - [`test.csv`](../assets/test.csv): There's a total of 11 features and 116,293 observations for the years 2008, 2010, 2012 and 2014. The presence of West Nile Virus is missing from this set, which we will use our model to predict. 
 - [`spray.csv`](../assets/spray.csv): This dataset contains 14,835 geographic information system (GIS) data on the city's spraying efforts in 2011 and 2013 - including the date, time, latitude and longitude.
@@ -31,7 +31,7 @@ To build a model with more than 70% recall to predict the period and location wh
 - [`mapdata_copyright_openstreetmap_contributors.txt`](../assets/mapdata_copyright_openstreetmap_contributors.txt): Map files from Open Streetmap and used for visualizations in the analysis. 
 
 ## Data Dictionary
----
+
 | **Feature**            	| **Type** 	| **Dataset**              	| **Description**                                                                         	|
 |------------------------	|----------	|--------------------------	|-----------------------------------------------------------------------------------------	|
 | Id                     	| int      	| `train.csv` & `test.csv` 	| ID number of the record                                                                 	|
@@ -76,7 +76,7 @@ To build a model with more than 70% recall to predict the period and location wh
 
 
 ## Additional References
----
+
 1. [Relative Humidity Calculator](https://www.omnicalculator.com/physics/relative-humidity)
 - We referred to this humidity calculator to derive the relative humidity in our `weather.csv` dataset.
 
@@ -117,7 +117,7 @@ To build a model with more than 70% recall to predict the period and location wh
 - We reference [Table 4](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3945683/table/T4/?report=objectonly), the specific figures on medical costs and productivity loss in our cost-benefit analysis.
 
 ## Methodology
----
+
 For this project, we've conducted a thorough analysis and modeling through these steps:
 1. **Data Cleaning**: We assessed the training dataset for any outliers and removed them immediately. We also checked for missing values where we've filled them or removed them if irrelevant.
 2. **Exploratory Data Analysis**: We visualized the dataset through a series of graphs and plots to better understand the relationships between variables as well as its individual impact the spread of the West Nile Virus.
@@ -128,15 +128,15 @@ For this project, we've conducted a thorough analysis and modeling through these
 We've also uploaded the predicted West Nile Virus presence on [Kaggle](https://www.kaggle.com/competitions/predict-west-nile-virus/data) to measure the accuracy of our finalized model.
 
 ## Initial Findings
----
+
 [insert 5-8 key takeaways from EDA]
 
 ## Modeling Results
----
+
 [insert summary of results]
     
 ## Cost-Benefit Analysis
----
+
 We proposed three potential approach for spraying efforts, below is a summary:
 - **Option 1: Spray all** 
     - Spraying all areas in Chicago limits us from identifying the regions with hot spots accurately after the operation completes. 
@@ -156,7 +156,7 @@ Hence, we would recommend pursuing the targeted spraying approach:
 - While there are still a few human cases, but knowing this now will help us prepare for severe illnesses ahead of time
 
 ## Limitations
----
+
 There were several limitations in the model's ability to predict or classify the presence of WNV, including:
 
 **1. Data availability and quality**:
@@ -167,13 +167,13 @@ There were several limitations in the model's ability to predict or classify the
 - The current model is trained on a specific dataset and may not be able to generalize to other datasets or situations. This can be a particular issue when trying to predict WNV infection, as the distribution of WNV cases can vary significantly from state to state.
 
 ## Conclusion
----
+
 In summary, our model was able to:
 1. Achieve target recall more than 70%: Model's recall is 72% through the Adaptive Boosting Classifier 
 2. This allowed us to optimize a targeted spraying approach to save **USD440,459** in spraying efforts
 
 ## Recommendations
----
+
 Through our model and proposed targeted approach, CDPH will be able to optimize spray in terms of frequency and locations to reduce the amount of unnecessary spraying in areas where WNV is absent. Sprays should also be done when there is low wind speeds to prevent the spray from blowing away too quickly.
 
 However on top of our model, controlling mosquito population and curbing virus transmission will require a holistic approach. This could be done in a few ways:
