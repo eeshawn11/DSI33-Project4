@@ -75,47 +75,6 @@ To build a model with more than 70% recall to predict the period and location wh
 | AvgSpeed               	| object   	| `weather.csv`            	| Average wind speed (mph)                                                                	|
 
 
-## Additional References
-
-1. [Relative Humidity Calculator](https://www.omnicalculator.com/physics/relative-humidity)
-- We referred to this humidity calculator to derive the relative humidity in our `weather.csv` dataset.
-
-2. [Life Cycle of Culex Species Mosquitoes](https://www.cdc.gov/mosquitoes/about/life-cycles/culex.html)
-- We referred to this article to better understand the life cycle of Culex Pipiens mosquitoes, which was quoted in the EDA portion.
-
-3. [Spatial and Temporal Variation in Vector Competence of Culex pipiens and Cx. restuans Mosquitoes for West Nile Virus](https://www.ajtmh.org/view/journals/tpmd/83/3/article-p607.xml)
-- This academic journal studied the difference between Culex Pipiens and Culex Restuans - both vectors of WNV.
-- We've quoted this research in the EDA section on breakdown of species.
-
-4. [The drivers of West Nile virus human illness in the Chicago, Illinois, USA area](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7241786/)
-- This academic journal assessed the WNV cases and surveillance program in Chicago, Illinois and studied the factors influencing the WNV spread in the city and the surrounding counties.
-- We extracted [Table 2](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7241786/table/pone.0227160.t002/?report=objectonly) for the cost-benefit analysis of this project. The table contains the annual human WNV cases, and no. positive mosquito pools with the virus in Cook and DuPage counties, where 66% of cases were from Chicago.
-
-5. [CDInfo Surveillance Newsletter July 2013 edition](https://www.chicago.gov/content/dam/city/depts/cdph/statistics_and_reports/CDInfo_2013_JULY_WNV.pdf)
-- This newsletter provides a summary of the mosquito surveillance program and cases in the 2012 season - where the city experienced one of the worst outbreak of WNV. The newsletter also covered number of reported human cases, which we've included in the cost-benefit analysis section.
-- We referred to this newsletter for a better understanding of the outbreak in 2012 and included suggestion to include other vector control measures in future research (as part of our recommendations). 
-
-6. [Community areas in Chicago](https://en.wikipedia.org/wiki/Community_areas_in_Chicago)
-- The Wikipedia page included information about the size of Chicago area and the specific neighborhoods - we used these figures in our cost-benefit analysis.
-
-7. Media articles on spraying efforts in Chicago
-- Appended below is a list of articles covering the city's spraying efforts throughout the years. These articles tell us that spraying efforts were done but they were done sporadically and there needs to be a more structured approach to spraying insecticide, which is further explained in the cost-benefit analysis.
-    - 2013, [Chicago Begins Spraying For Mosquitoes Wednesday](https://www.nbcchicago.com/news/local/chicago-begins-west-nile-virus-prevention/1958957/)
-    - 2017, [City To Spray For Mosquitoes For First Time, Targeting Far South Side](https://www.cbsnews.com/chicago/news/spray-mosquitoes-far-south-side-west-nile-prevention/)
-    - 2021, [Chicago to spray insecticide to protect against West Nile Virus](https://www.fox32chicago.com/news/chicago-to-spray-insecticide-to-protect-against-west-nile-virus)
-    - 2022, [Mosquito Spray On Thursday, September 8, 2022](http://www.downers.us/top-stories/2022/09/07/mosquito-spray-on-thursday-september-8-2022)
-
-8. [Zenivex Factsheet](https://www.chicago.gov/content/dam/city/depts/cdph/Mosquito-Borne-Diseases/Zenivex.pdf)
-- This factsheet covers commonly-asked questions about Zenivex, the insecticide used to rid WNV. 
-- We referred to this factsheet that mentioned spray operations would always be notified through the media.
-
-9. [The value of mosquito control](https://www.centralmosquitocontrol.com/-/media/project/oneweb/centralmosquitocontrol/files/us/resources-lit-files/zenivex-cost-comparison-fact-sheet.pdf)
-- The flyer indicates the cost for the insecticide Zenivex at 67 cents per acre, a figure we'll use as an approximate in the cost-benefit analysis.
-
-10. [Initial and Long-Term Costs of Patients Hospitalized with West Nile Virus Disease](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3945683/)
-- The study covers the economic cost involved for WNV patients in 2012.
-- We reference [Table 4](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3945683/table/T4/?report=objectonly), the specific figures on medical costs and productivity loss in our cost-benefit analysis.
-
 ## Methodology
 
 For this project, we've conducted a thorough analysis and modeling through these steps:
@@ -188,3 +147,44 @@ The quest to improve the recall and accuracy of our WNV virus detection model is
 1. Keeping closer track of spray data from the last few years.
 2. Including other variables, such as human cases and dead bird cases.
 3. Using local neighborhood's weather data for higher location accuracy. 
+
+## Additional References
+
+1. [Relative Humidity Calculator](https://www.omnicalculator.com/physics/relative-humidity)
+- We referred to this humidity calculator to derive the relative humidity in our `weather.csv` dataset.
+
+2. [Life Cycle of Culex Species Mosquitoes](https://www.cdc.gov/mosquitoes/about/life-cycles/culex.html)
+- We referred to this article to better understand the life cycle of Culex Pipiens mosquitoes, which was quoted in the EDA portion.
+
+3. [Spatial and Temporal Variation in Vector Competence of Culex pipiens and Cx. restuans Mosquitoes for West Nile Virus](https://www.ajtmh.org/view/journals/tpmd/83/3/article-p607.xml)
+- This academic journal studied the difference between Culex Pipiens and Culex Restuans - both vectors of WNV.
+- We've quoted this research in the EDA section on breakdown of species.
+
+4. [The drivers of West Nile virus human illness in the Chicago, Illinois, USA area](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7241786/)
+- This academic journal assessed the WNV cases and surveillance program in Chicago, Illinois and studied the factors influencing the WNV spread in the city and the surrounding counties.
+- We extracted [Table 2](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7241786/table/pone.0227160.t002/?report=objectonly) for the cost-benefit analysis of this project. The table contains the annual human WNV cases, and no. positive mosquito pools with the virus in Cook and DuPage counties, where 66% of cases were from Chicago.
+
+5. [CDInfo Surveillance Newsletter July 2013 edition](https://www.chicago.gov/content/dam/city/depts/cdph/statistics_and_reports/CDInfo_2013_JULY_WNV.pdf)
+- This newsletter provides a summary of the mosquito surveillance program and cases in the 2012 season - where the city experienced one of the worst outbreak of WNV. The newsletter also covered number of reported human cases, which we've included in the cost-benefit analysis section.
+- We referred to this newsletter for a better understanding of the outbreak in 2012 and included suggestion to include other vector control measures in future research (as part of our recommendations). 
+
+6. [Community areas in Chicago](https://en.wikipedia.org/wiki/Community_areas_in_Chicago)
+- The Wikipedia page included information about the size of Chicago area and the specific neighborhoods - we used these figures in our cost-benefit analysis.
+
+7. Media articles on spraying efforts in Chicago
+- Appended below is a list of articles covering the city's spraying efforts throughout the years. These articles tell us that spraying efforts were done but they were done sporadically and there needs to be a more structured approach to spraying insecticide, which is further explained in the cost-benefit analysis.
+    - 2013, [Chicago Begins Spraying For Mosquitoes Wednesday](https://www.nbcchicago.com/news/local/chicago-begins-west-nile-virus-prevention/1958957/)
+    - 2017, [City To Spray For Mosquitoes For First Time, Targeting Far South Side](https://www.cbsnews.com/chicago/news/spray-mosquitoes-far-south-side-west-nile-prevention/)
+    - 2021, [Chicago to spray insecticide to protect against West Nile Virus](https://www.fox32chicago.com/news/chicago-to-spray-insecticide-to-protect-against-west-nile-virus)
+    - 2022, [Mosquito Spray On Thursday, September 8, 2022](http://www.downers.us/top-stories/2022/09/07/mosquito-spray-on-thursday-september-8-2022)
+
+8. [Zenivex Factsheet](https://www.chicago.gov/content/dam/city/depts/cdph/Mosquito-Borne-Diseases/Zenivex.pdf)
+- This factsheet covers commonly-asked questions about Zenivex, the insecticide used to rid WNV. 
+- We referred to this factsheet that mentioned spray operations would always be notified through the media.
+
+9. [The value of mosquito control](https://www.centralmosquitocontrol.com/-/media/project/oneweb/centralmosquitocontrol/files/us/resources-lit-files/zenivex-cost-comparison-fact-sheet.pdf)
+- The flyer indicates the cost for the insecticide Zenivex at 67 cents per acre, a figure we'll use as an approximate in the cost-benefit analysis.
+
+10. [Initial and Long-Term Costs of Patients Hospitalized with West Nile Virus Disease](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3945683/)
+- The study covers the economic cost involved for WNV patients in 2012.
+- We reference [Table 4](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3945683/table/T4/?report=objectonly), the specific figures on medical costs and productivity loss in our cost-benefit analysis.
