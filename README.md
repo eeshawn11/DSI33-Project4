@@ -19,7 +19,7 @@ To build a model with more than 70% recall to predict the period and location wh
 - [Part 1: Data Cleaning](Part_1_WNV_Cleaning.ipynb)
 - [Part 2: Exploratory Data Analysis](Part_2_WNV_EDA.ipynb)
 - [Part 3: Modeling & Tuning](Part_3_WNV_Modeling.ipynb)
-- [Part 4: Cost-Benefit Analysis & Conclusion]((Part_4_WNV_CBA_Conclusion.ipynb)
+- [Part 4: Cost-Benefit Analysis & Conclusion](Part_4_WNV_CBA_Conclusion.ipynb)
 
 
 ## About the datasets
