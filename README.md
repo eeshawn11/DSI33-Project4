@@ -1,153 +1,190 @@
-# ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) Kaggle Competition - Starter
-
-## Introduction
-
-Welcome to your first week of work at the Disease And Treatment Agency, division of Societal Cures In Epidemiology and New Creative Engineering (DATA-SCIENCE). Time to get to work!
-
-Due to the recent epidemic of West Nile Virus in the Windy City, we've had the Department of Public Health set up a surveillance and control system. We're hoping it will let us learn something from the mosquito population as we collect data over time. Pesticides are a necessary evil in the fight for public health and safety, not to mention expensive! We need to derive an effective plan to deploy pesticides throughout the city, and that is **exactly** where you come in!
-
-## Dataset
-
-The dataset, along with description, can be found here: [https://www.kaggle.com/c/predict-west-nile-virus/](https://www.kaggle.com/c/predict-west-nile-virus/).
-
-**This is also where you will be submitting your code for evaluation**. We will be using the Kaggle Leaderboard to keep track of your score. The public leaderboard uses roughly 30% of the dataset to score an AUC (Area Under Curve) metric.
-
-> If you do not already have a Kaggle account, you will need to sign up on the website.  Also note that you will be submitting a "Late Submission" on Kaggle because the official competition has ended.  You can use the leaderboard to see how your results compare against roughly 1300 other data science teams!
-
-You can submit predictions as many times as you want to Kaggle, but there is a limit of 5 submissions per day.  Be intentional with your submissions!
+# West Nile Virus Analysis & Prediction
 
 
-#### Navigating Group Work
+## Executive Summary
 
-This project will be executed as a group.  To make your team as effective and efficient as possible you should do the create a shared GitHub repo and project planning document as described in the deliverables section below.
+West Nile virus (WNV) is the leading cause of mosquito-borne disease in the US, and it is spread to people by the bite of an infected mosquito, specifically a Culex pipiens mosquito. One in five infected people with WNV would experience fever, nausea, headache and muscle aches lasting from a few days to a few weeks - while the remaining four out of five would not exhibit any symptoms. To date, the virus remains a major concern as individuals with weaker immune systems and those above 60 are at higher risk for severe illness from WNV - raking up medical costs and creating more burden in the healthcare system. 
 
-## Deliverables
+Every year the Chicago Department of Public Health (CDPH) runs a comprehensive surveillance program in suburban areas to trap mosquitoes and test them for WNV. This data has helped CDPH target high-risk areas for the virus and significantly reduce the number of positive cases in the last few years. ([source](https://www.chicago.gov/city/en/depts/cdph/provdrs/healthy_communities/news/2022/september/first-human-case-of-west-nile-virus-detected-in-chicago-in-2022.html))
 
-**GitHub Repo**
+However in 2021, Chicago was ranked one of the top five US cities with mosquitoes - putting its residents at risk of contracting WNV. ([source](https://www.fox32chicago.com/news/chicago-to-spray-insecticide-to-protect-against-west-nile-virus)). Furthermore in the last two years, much of the public efforts and funding were focused on keeping the city safe from COVID-19. Now, ahead of the looming recession and tightening of budgets ([source](https://www.economist.com/the-world-ahead/2022/11/18/why-a-global-recession-is-inevitable-in-2023)), the CDPH recognized an urgency to plan ahead and be prudent about spending. 
 
-1. Create a GitHub repository for the group. Each member should be added as a contributor.
-2. Retrieve the dataset and upload it into a directory named `assets`.
-3. Generate a .py or .ipynb file that imports the available data.
+Our team at the Disease and Treatment Agency was tasked to analyze the years with more severe WNV outbreak and devise a plan to identify potential hotspots, ahead of the 2023 summer period.
 
-**Project Planning**
+**Our problem statement:**
+To build a model with more than 70% recall to predict the period and location where mosquitoes will test positive for WNV, enabling CDPH to preemptively allocate the city’s spraying resources to curb the virus transmission.
 
-1. Define your deliverable - what is the end result?
-2. Break that deliverable up into its components, and then go further down the rabbit hole until you have actionable items. Document these using a project managment tool to track things getting done.  The tool you use is up to you; it could be Trello, a spreadsheet, GitHub issues, etc.
-3. Begin deciding priorities for each task. These are subject to change, but it's good to get an initial consensus. Order these priorities however you would like.
-4. You planning documentation (or a link to it) should be included in your GitHub repo.
+## Content
 
-**EDA**
-
-1. Describe the data. What does it represent? What types are present? What does each data points' distribution look like? Discuss these questions, and your own, with your partners. Document your conclusions.
-2. What kind of cleaning is needed? Document any potential issues that will need to be resolved.
-
-**Note:** As you know, EDA is the single most important part of data science. This is where you should be spending most of your time. Knowing your data, and understanding the status of its integrity, is what makes or breaks a project.
-
-**Modeling**
-
-1. The goal is of course to build a model and make predictions that the city of Chicago can use when it decides where to spray pesticides! Your team should have a clean Jupyter Notebook that shows your EDA process, your modeling and predictions.
-2. Conduct a cost-benefit analysis. This should include annual cost projections for various levels of pesticide coverage (cost) and the effect of these various levels of pesticide coverage (benefit). *(Hint: How would we quantify the benefit of pesticide spraying? To get "maximum benefit," what does that look like and how much does that cost? What if we cover less and therefore get a lower level of benefit?)*
-3. Your final submission CSV should be in your GitHub repo.
-
-**Presentation**
-* Audience: You are presenting to members of the CDC. Some members of the audience will be biostatisticians and epidemiologists who will understand your models and metrics and will want more information. Others will be decision-makers, focusing almost exclusively on your cost-benefit analysis. Your job is to convince both groups of the best course of action in the same meeting and be able to answer questions that either group may ask.
-* The length of your presentation should not exceed 25 minutes (a rough guideline: 3 minute intro, 12 minutes on model, 5 minutes on cost-benefit analysis, 5 minutes on recommendations/conclusion).  Touch base with your teaching team ... er, manager... for specific logistic requirements!
-
----
-
-**Your project is due by Week 8 Friday 10AM**
-
----
-
-### Project Feedback + Evaluation
-
-For all projects, students will be evaluated on a simple 4 point scale (0-3 inclusive). Instructors will use this rubric when scoring student performance on each of the core project requirements:
-
-Score | Expectations
------ | ------------
-**0** | _Does not meet expectations. Try again._
-**1** | _Approaching expectations. Getting there..._
-**2** | _Meets expectations. Great job._
-**3** | _Surpasses expectations. Brilliant!_
-
-### Rubric
-
-Your final assessment ("grade" if you will) will be calculated based on a topical rubric (see below).  For each category, you will receive a score of 0-3.  From the rubric you can see descriptions of each score and what is needed to attain those scores.
-
-For Project 3 the evaluation categories are as follows:
-- [Organization](#organization)
-- [Data Structures](#data-structures)
-- [Python Syntax and Control Flow](#python-syntax-and-control-flow)
-- [Probability and Statistics](#probability-and-statistics)
-- [Modeling](#modeling)
-- [Presentation](#presentation)
-
-#### Organization
-
-Clearly commented, annotated and sectioned Jupyter notebook or Python script.  Comments and annotations add clarity, explanation and intent to the work.  Notebook is well-structured with title, author and sections. Assumptions are stated and justified.
+- [Part 1: Data Cleaning](Part_1_WNV_Cleaning.ipynb)
+- [Part 2: Exploratory Data Analysis](Part_2_WNV_EDA.ipynb)
+- [Part 3: Modeling & Tuning](Part_3_WNV_Modeling.ipynb)
+- [Part 4: Cost-Benefit Analysis & Conclusion](Part_4_WNV_CBA_Conclusion.ipynb)
 
 
-| Score | Status                     | Examples                                                                                                                                                                                                                                         |
-|-------|----------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 0     | Does not Meet Expectations | 1. Comments and annotations are **absent** <br> 2. There is no clear notebook structure <br> 3. Assumptions are not stated                                                                                                                                       |
-| 1     | Approaching Expectations   | 1. Comments are present but generally unclear or uninformative (e.g., comments do not clarify, explain or interpret the code) <br> 2. There are some structural components like section/subsection headings <br> 3. Assumptions are stated but not justified |
-| 2     | Meets Expectations         | 1. Comments and annotations are clear and informative <br> 2. There is a clear structure to the notebook with title and appropriate sectioning <br> 3. Assumptions are both stated and justified                                                             |
-| 3     | Exceeds Expectations       | 1. Comments and annotations are clear, informative and insightful <br> 2. There is a helpful and cogent structure to the notebook that clarifies the analysis flow <br> 3. Assumptions are stated, justified and backed by evidence or insight               |
+## About the datasets
 
-#### Data Structures
+- [`train.csv`](../assets/train.csv): This is the main dataset we'll be working with, which contains 10,506 observations on the presence of West Nile Virus across neighborhood clusters in Chicago, Illinois. This dataset is taken from the years 2007, 2009, 2011 and 2013. There are a total of 11 variables involved in tracking the West Nile Virus in the neighborhoods.
+- [`test.csv`](../assets/test.csv): There's a total of 11 features and 116,293 observations for the years 2008, 2010, 2012 and 2014. The presence of West Nile Virus is missing from this set, which we will use our model to predict. 
+- [`spray.csv`](../assets/spray.csv): This dataset contains 14,835 geographic information system (GIS) data on the city's spraying efforts in 2011 and 2013 - including the date, time, latitude and longitude.
+-  [`weather.csv`](../assets/weather.csv): This dataset contains weather information from 2007 to 2014 - covering 2,944 observations across 22 relevant weather-related variables. 
+- [`mapdata_copyright_openstreetmap_contributors.txt`](../assets/mapdata_copyright_openstreetmap_contributors.txt): Map files from Open Streetmap and used for visualizations in the analysis. 
 
-Python data structures including lists, dictionaries and imported structures (e.g. DataFrames), are created and used correctly.  The appropriate data structures are used in context.  Data structures are created and accessed using appropriate mechanisms such as comprehensions, slices, filters and copies.
+## Data Dictionary
 
-| Score | Status | Examples |
-|-------|----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 0 | Does not Meet Expectations | 1. Appropriate data structures are not identified or implemented <br> 2. Data structures are not created appropriately <br> 3. Data structures are not accessed or used effectively |
-| 1 | Approaching Expectations | 1. Contextually appropriate data structures are identified in some but not all instances <br> 2. Data structures are created successfully but lacked efficiency or generality (e.g., structures were hard-coded with values that limits generalization; brute-force vs automatic creation/population of data) <br> 3. Data structures are accessed or used but best practices are not adopted |
-| 2 | Meets Expectations | 1. Contextually appropriate data structures are identified and implemented given the context of the problem <br> 2. Data structures are created in an effective manner <br> 3. Data structures are accessed and used following general programming and Pythonic best practices |
-| 3 | Exceeds Expectations | 1. Use or creation of data structures is clever and insightful <br> 2. Data structures are created in a way that reveals significant Pythonic understanding <br> 3. Data structures are used or applied in clever or insightful ways |
+| **Feature**            	| **Type** 	| **Dataset**              	| **Description**                                                                         	|
+|------------------------	|----------	|--------------------------	|-----------------------------------------------------------------------------------------	|
+| Id                     	| int      	| `train.csv` & `test.csv` 	| ID number of the record                                                                 	|
+| Date                   	| object   	| `train.csv` & `test.csv` 	| Refers to the date the West Nile Virus test is performed                                	|
+| Address                	| object   	| `train.csv` & `test.csv` 	| The approximate address of the location of trap; sent to GeoCoder                       	|
+| Species                	| object   	| `train.csv` & `test.csv` 	| The mosquito species in trap                                                            	|
+| Block                  	| int      	| `train.csv` & `test.csv` 	| Refers to block number of address                                                       	|
+| Street                 	| object   	| `train.csv` & `test.csv` 	| Refers to street of address                                                             	|
+| Trap                   	| object   	| `train.csv` & `test.csv` 	| ID number of the trap                                                                   	|
+| AddressNumberAndStreet 	| object   	| `train.csv` & `test.csv` 	| The approximate address retrieved from GeoCoder                                         	|
+| Latitude               	| float    	| `train.csv` & `test.csv` 	| The latitude retrieved from GeoCoder                                                    	|
+| Longitude              	| float    	| `train.csv` & `test.csv` 	| The longitude retrieved from GeoCoder                                                   	|
+| AddressAccuracy        	| int      	| `train.csv` & `test.csv` 	| The accuracy of information returned from GeoCoder                                      	|
+| NumMosquitos           	| int      	| `train.csv` & `test.csv` 	| The number of mosquitoes in the trap                                                    	|
+| WnvPresent             	| int      	| `train.csv` & `test.csv` 	| Whether or not West Nile Virus is present in these mosquitoes (1 = present; 0 = absent) 	|
+| Date                   	| object   	| `spray.csv`              	| The date of spray                                                                       	|
+| Time                   	| object   	| `spray.csv`              	| The time of spray                                                                       	|
+| Latitude               	| float    	| `spray.csv`              	| Latitude of spray                                                                       	|
+| Longitude              	| float    	| `spray.csv`              	| Longitude of spray                                                                      	|
+| Station                	| int      	| `weather.csv`            	| Refers to the weather station (1 or 2)                                                  	|
+| Date                   	| datetime 	| `weather.csv`            	| Refers to the date of measurement                                                       	|
+| Tmax                   	| int      	| `weather.csv`            	| Maximum daily temperature (Degrees Fahrenheit)                                          	|
+| Tmin                   	| int      	| `weather.csv`            	| Minimum daily temperature (Degrees Fahrenheit)                                          	|
+| Tavg                   	| object   	| `weather.csv`            	| Average daily temperature (Degrees Fahrenheit)                                          	|
+| Depart                 	| object   	| `weather.csv`            	| Departure from normal temperature (Degrees Fahrenheit)                                  	|
+| Dewpoint               	| int      	| `weather.csv`            	| Average dew point (Degrees Fahrenheit)                                                  	|
+| WetBulb                	| object   	| `weather.csv`            	| Average wet bulb (Degrees Fahrenheit)                                                   	|
+| Heat                   	| object   	| `weather.csv`            	| Heating degree days                                                                     	|
+| Cool                   	| object   	| `weather.csv`            	| Cooling degree days                                                                     	|
+| Sunrise                	| object   	| `weather.csv`            	| Time of sunrise (calculated, not observed)                                              	|
+| Sunset                 	| object   	| `weather.csv`            	| Time of sunset (calculated, not observed)                                               	|
+| CodeSum                	| object   	| `weather.csv`            	| Code of weather phenomena                                                               	|
+| Depth                  	| object   	| `weather.csv`            	| Depth of snow on the ground (M = Missing data)                                          	|
+| Water1                 	| object   	| `weather.csv`            	| Water equivalent (M = Missing data)                                                     	|
+| SnowFall               	| object   	| `weather.csv`            	| Snowfall (inch) (M = Missing data, T= Trace)                                            	|
+| PrecipTotal            	| object   	| `weather.csv`            	| Total daily rainfall (inch)                                                             	|
+| StnPressure            	| object   	| `weather.csv`            	| Average atmospheric pressure (inch Hg)                                                  	|
+| SeaLevel               	| object   	| `weather.csv`            	| Average sea level pressure (inch Hg)                                                    	|
+| ResultSpeed            	| float    	| `weather.csv`            	| Resultant wind speed (mph)                                                              	|
+| ResultDir              	| int      	| `weather.csv`            	| Resultant wind direction (Degrees)                                                      	|
+| AvgSpeed               	| object   	| `weather.csv`            	| Average wind speed (mph)                                                                	|
 
 
-#### Python Syntax and Control Flow
+## Methodology
 
-Python code is written correctly and follows standard style guidelines and best practices.  There are no runtime errors.  The code is expressive while being reasonably concise.
+For this project, we've conducted a thorough analysis and modeling through these steps:
+1. **Data Cleaning**: We assessed the training dataset for any outliers and removed them immediately. We also checked for missing values where we've filled them or removed them if irrelevant.
+2. **Exploratory Data Analysis**: We visualized the dataset through a series of graphs and plots to better understand the relationships between variables as well as its individual impact the spread of the West Nile Virus.
+3. **Feature Engineering & Data Preprocessing**: After evaluating specific variables, we removed variables that didn't have much impact and combined variables that were relevant to each other.
+4. **Data Modeling & Evaluation**: Based on the selected features, we modeled them through these classification models - Histogram-Based Gradient Boosting Classifier, Logistic Regression, KNeighbors Classifier and Adaptive Boosting Classifier. The best model will then be used to predict the presence of West Nile Virus in the test dataset. 
+5. **Cost-Benefit Analysis**: Following the best model selected, we also conducted a cost-benefit analysis on annual cost of pesticide coverage and its benefits - particularly for areas that are at higher risk.
 
-| Score | Status | Examples |
-|-------|----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 0 | Does not Meet Expectations | 1. Code has systemic syntactical issues <br> 2. Code generates incorrect results <br> 3. Code is disorganized and needlessly difficult |
-| 1 | Approaching Expectations | 1. Code is generally correct with some runtime errors <br> 2. Code logic is generally correct but does not produce the desired outcome <br> 3. Code is somewhat organized and follows some stylistic conventions |
-| 2 | Meets Expectations | 1. Code is syntactically correct (no runtime errors) <br> 2. Code generates desired results (logically correct) <br> 3. Code follows general best practices and style guidelines |
-| 3 | Exceeds Expectations | 1. Code adopts clever or advanced syntax <br> 2. Code generates desired results in an easily consumable manner (e.g., results are written to screen, file, pipeline, etc, as appropriate within the flow of the analysis) <br> 3. Code is exceptionally expressive, well formed and organized |
+We've also uploaded the predicted West Nile Virus presence on [Kaggle](https://www.kaggle.com/competitions/predict-west-nile-virus/data) to measure the accuracy of our finalized model.
 
+## Initial Findings
 
-#### Probability and Statistics
+[insert 5-8 key takeaways from EDA]
 
-Descriptive and inferential statistics are calculated and applied where appropriate.  Probabilistic reasoning is demonstrated.  There is a clear understanding of how probability and statistics affects the analysis being performed.
+## Modeling Results
 
-| Score | Status | Examples |
-|-------|----------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 0 | Does not Meet Expectations | 1. Descriptive statistical calculations are absent <br> 2. Inferential statistical calculations are absent <br> 3. Probabilities or statistics are not relevant given the context of the analysis |
-| 1 | Approaching Expectations | 1. Descriptive statistics are present in some cases <br> 2. Inferential statistics are present in some cases <br> 3. Probabilities or statistics are somewhat relevant to the analysis context |
-| 2 | Meets Expectations | 1. Descriptive statistics are calculated in all relevant situations <br> 2. Inferential statistics are calculated in all relevant situations <br> 3. Probabilities or statistics are relevant to the analysis |
-| 3 | Exceeds Expectations | 1. Descriptive statistics are calculated, interpreted and visualized (where appropriate) <br> 2. Inferential statistics are calculated, interpreted and visualized (where appropriate) <br> 3. Probabilities or statistics are leveraged to draw meaningful or insightful conclusions |
+[insert summary of results]
+    
+## Cost-Benefit Analysis
 
-#### Modeling
+We proposed three potential approach for spraying efforts, below is a summary:
+- **Option 1: Spray all** 
+    - Spraying all areas in Chicago limits us from identifying the regions with hot spots accurately after the operation completes. 
+    - It's more harmful for the environment with the frequent spraying and may also irritate residents with sensitive skin and sense of smell
+    - Even with this approach, there are still risks of positive cases so this approach will not guarantee that the city will be free of WNV - in fact, it could lead to the city wasting more resources. 
+- **Option 2: No spray** 
+    - When we choose not to spray at all, there is a much higher risk of people contracting WNV as it's one of the more widespread adult mosquito control measure. 
+    - Hence this would lead to higher hospitalization cost and productivity loss - our analysis shows that the city risks losing up to USD5,681,655. 
+- **Option 3: Targeted spray** 
+    - This appears to be the best approach as it's the lowest in spraying cost. 
+    - This helps minimize environmental impact from spraying and also reduce harm to the residents.
+    - Furthermore, this approach demonstrate the benefits in cost savings of **USD440,459** for spray, when compared to Option 1
 
-Data is appropriately prepared for modeling.  Model choice matches the context of the data and the analysis.  Model hyperparameters are optimized.  Model evaluation is robust.  Model results are extracted and explained either visually, numerically or narratively.
+Hence, we would recommend pursuing the targeted spraying approach:
+- USD766,280 in total cost for spraying as well as medical costs and productivity loss
+- USD440,459 in cost savings for spray
+- While there are still a few human cases, but knowing this now will help us prepare for severe illnesses ahead of time
 
-| Score | Status | Examples |
-|-------|----------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 0 | Does not Meet Expectations | 1. Data is not prepared for modeling.<br>2. Models are not implemented or not implemented fully.<br>3. Model hyperparameters are not considered.<br>4. Model evaluation is not performed.<br>5. Model results are unavailable or not extracted. |
-| 1 | Approaching Expectations | 1. Data has some null values, inappropriate types and/or improper handling of categorical labels.<br>2. Model choice is questionable given the objective of the analysis.<br>3. Model hyperparameters are insufficiently or not optimized.<br>4. Model evaluation is performed but the evaluation is not generalizable.<br>5. Model results are extracted but not explained or interpreted. |
-| 2 | Meets Expectations | 1. Data is free from nulls and correctly typed for the given model.<br>2. Model choice is appropriate to the analysis.<br>3. Model hyperparameters are optimally selected.<br>4. Model evaluation reflects generalizeable performance.<br>5. Model results are extracted and explained either visually, numerically or naratively. |
-| 3 | Exceeds Expectations | 1. Data is pristinely prepared with creative or useful feature engineering.<br>2. Model selection is justified and demonstrates an awareness of tradeoffs.<br>3. Model hyperparameters are optimized and the optimization is demonstrated/justified.<br>4. Model evaluation reflects generalizable performance and is interpreted in the context of the analysis.<br>5. Model results are explained, interpreted and related to the overarching analysis goals. |
+## Limitations
 
+There were several limitations in the model's ability to predict or classify the presence of WNV, including:
 
-#### Presentation
+**1. Data availability and quality**:
+- The classifier model need to rely on large amounts of high-quality data to make accurate predictions. There is insufficient data regarding spraying, as 2011 and 2013 datasets was the only spray data recorded. Data such as bird cases and human cases are also additional indicators that can be used to better detect WNV presence in areas around Chicago.
+- For this project, the full effectiveness of the spray had to be predicted via feature engineering and the use of proxies to forecast subsequent years. 
 
-The goal, methodology and results of your work are presented in a clear, concise and thorough manner.  The presentation is appropriate for the specified audience, and includes relevant and enlightening visual aides as appropriate.
+**2. Limited generalizability**:
+- The current model is trained on a specific dataset and may not be able to generalize to other datasets or situations. This can be a particular issue when trying to predict WNV infection, as the distribution of WNV cases can vary significantly from state to state.
 
-| Score | Status | Examples |
-|-------|----------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 0 | Does not Meet Expectations | 1. The problem was not well explained or ambiguous. <br> 2. The level of technicality was far above or below the target audience. <br> 3. The presentation went substantially over or under time. <br> 4. The speaker's voice was difficult to hear of unclear. <br> 5. The presentation visuals did not seem to support the talk. |
-| 1 | Approaching Expectations | 1. The problem was stated but was not 100% clear. <br> 2. The level of technicality was was good at times, but too low or too high at other times given the target audience. <br> 3. The presentation was given went slightly over or under time. <br> 4. The speaker's voice was at times difficult to understand. <br> 5. The presentation visuals were generally helpful, but some of them were either too complex or disconnected from the narrative. |
-| 2 | Meets Expectations | 1. The problem was framed appropriately for the audience. <br> 2. The level of technicality was appropriate to the target audience. <br> 3. The presentation was given within the allocated timeframe. <br> 4. The speaker's voice had volume and clarity. <br> 5. The presentation visuals were helpful and supportive. |
-| 3 | Exceeds Expectations | 1. The problem was expertly stated and compelling. <br> 2. The level of technicality was perfect for the target audience. <br> 3. The presentation was given within the allocated timeframe and paced evenly throughout. <br> 4. The speaker's voice was clear, understandable and consistent. <br> 5. The presentation visuals provided distinct insight, supported the speaker from the background, and were not distracting. |
+## Conclusion
+
+In summary, our model was able to:
+1. Achieve target recall more than 70%: Model's recall is 72% through the Adaptive Boosting Classifier 
+2. This allowed us to optimize a targeted spraying approach to save **USD440,459** in spraying efforts
+
+## Recommendations
+
+Through our model and proposed targeted approach, CDPH will be able to optimize spray in terms of frequency and locations to reduce the amount of unnecessary spraying in areas where WNV is absent. Sprays should also be done when there is low wind speeds to prevent the spray from blowing away too quickly.
+
+However on top of our model, controlling mosquito population and curbing virus transmission will require a holistic approach. This could be done in a few ways:
+1. **Larviciding**: As spraying only kills off adult mosquitoes, larvicides can help aid in killing mosquito larvae before they grow into adults, helping reduce the overall population.  
+2. **Repellents**: Distribute insect repellents to the general public will encourage individuals to keep their homes and household safe from mosquitoes.   
+3. **Mosquito repellent screens**: These should also be installed in prime areas such as public schools or event spaces to reduce the amount of mosquitoes from entering buildings. To further support community-wide mosquito control efforts, mosquito nets can be given to locals as well. 
+4. **Educational campaigns at schools**: During the summer, most American students spend a lot of time at home and can chip in to help their parents keep their houses tidy. CDPH could consider running awareness workshops at schools in the spring time, to encourage students to keep their homes clean during the summertime.
+5. **Increase frequency of trash collection**: Increase frequency of trash collection where disposables such as cups and containers are thrown away more often, particularly in open areas such as parks and outdoor malls. This would help prevent creating ideal breeding conditions for mosquitoes. 
+6. **Creating alerts in neighborhoods**: Similar to how Singapore keep residents informed of dengue cases, Chicago neighborhoods can consider alerting local residents whenever WNV is detected. This can be done with a flyer on notice board or text alert that indicates active WNV virus in the community. 
+
+The quest to improve the recall and accuracy of our WNV virus detection model is an ongoing one, which we can achieve by:
+1. Keeping closer track of spray data from the last few years.
+2. Including other variables, such as human cases and dead bird cases.
+3. Using local neighborhood's weather data for higher location accuracy. 
+
+## Additional References
+
+1. [Relative Humidity Calculator](https://www.omnicalculator.com/physics/relative-humidity)
+- We referred to this humidity calculator to derive the relative humidity in our `weather.csv` dataset.
+
+2. [Life Cycle of Culex Species Mosquitoes](https://www.cdc.gov/mosquitoes/about/life-cycles/culex.html)
+- We referred to this article to better understand the life cycle of Culex Pipiens mosquitoes, which was quoted in the EDA portion.
+
+3. [Spatial and Temporal Variation in Vector Competence of Culex pipiens and Cx. restuans Mosquitoes for West Nile Virus](https://www.ajtmh.org/view/journals/tpmd/83/3/article-p607.xml)
+- This academic journal studied the difference between Culex Pipiens and Culex Restuans - both vectors of WNV.
+- We've quoted this research in the EDA section on breakdown of species.
+
+4. [The drivers of West Nile virus human illness in the Chicago, Illinois, USA area](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7241786/)
+- This academic journal assessed the WNV cases and surveillance program in Chicago, Illinois and studied the factors influencing the WNV spread in the city and the surrounding counties.
+- We extracted [Table 2](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7241786/table/pone.0227160.t002/?report=objectonly) for the cost-benefit analysis of this project. The table contains the annual human WNV cases, and no. positive mosquito pools with the virus in Cook and DuPage counties, where 66% of cases were from Chicago.
+
+5. [CDInfo Surveillance Newsletter July 2013 edition](https://www.chicago.gov/content/dam/city/depts/cdph/statistics_and_reports/CDInfo_2013_JULY_WNV.pdf)
+- This newsletter provides a summary of the mosquito surveillance program and cases in the 2012 season - where the city experienced one of the worst outbreak of WNV. The newsletter also covered number of reported human cases, which we've included in the cost-benefit analysis section.
+- We referred to this newsletter for a better understanding of the outbreak in 2012 and included suggestion to include other vector control measures in future research (as part of our recommendations). 
+
+6. [Community areas in Chicago](https://en.wikipedia.org/wiki/Community_areas_in_Chicago)
+- The Wikipedia page included information about the size of Chicago area and the specific neighborhoods - we used these figures in our cost-benefit analysis.
+
+7. Media articles on spraying efforts in Chicago
+- Appended below is a list of articles covering the city's spraying efforts throughout the years. These articles tell us that spraying efforts were done but they were done sporadically and there needs to be a more structured approach to spraying insecticide, which is further explained in the cost-benefit analysis.
+    - 2013, [Chicago Begins Spraying For Mosquitoes Wednesday](https://www.nbcchicago.com/news/local/chicago-begins-west-nile-virus-prevention/1958957/)
+    - 2017, [City To Spray For Mosquitoes For First Time, Targeting Far South Side](https://www.cbsnews.com/chicago/news/spray-mosquitoes-far-south-side-west-nile-prevention/)
+    - 2021, [Chicago to spray insecticide to protect against West Nile Virus](https://www.fox32chicago.com/news/chicago-to-spray-insecticide-to-protect-against-west-nile-virus)
+    - 2022, [Mosquito Spray On Thursday, September 8, 2022](http://www.downers.us/top-stories/2022/09/07/mosquito-spray-on-thursday-september-8-2022)
+
+8. [Zenivex Factsheet](https://www.chicago.gov/content/dam/city/depts/cdph/Mosquito-Borne-Diseases/Zenivex.pdf)
+- This factsheet covers commonly-asked questions about Zenivex, the insecticide used to rid WNV. 
+- We referred to this factsheet that mentioned spray operations would always be notified through the media.
+
+9. [The value of mosquito control](https://www.centralmosquitocontrol.com/-/media/project/oneweb/centralmosquitocontrol/files/us/resources-lit-files/zenivex-cost-comparison-fact-sheet.pdf)
+- The flyer indicates the cost for the insecticide Zenivex at 67 cents per acre, a figure we'll use as an approximate in the cost-benefit analysis.
+
+10. [Initial and Long-Term Costs of Patients Hospitalized with West Nile Virus Disease](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3945683/)
+- The study covers the economic cost involved for WNV patients in 2012.
+- We reference [Table 4](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3945683/table/T4/?report=objectonly), the specific figures on medical costs and productivity loss in our cost-benefit analysis.
