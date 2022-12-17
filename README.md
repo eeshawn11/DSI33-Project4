@@ -135,8 +135,8 @@ We proposed three potential approach for spraying efforts, below is a summary:
     - Furthermore, this approach demonstrate the benefits in cost savings of **USD460,512** for spray, when compared to Option 1
 
 Hence, we would recommend pursuing the targeted spraying approach:
-- USD766,280 in total cost for spraying as well as medical costs and productivity loss
-- USD440,459 in cost savings for spray
+- USD746,227 in total cost for spraying as well as medical costs and productivity loss
+- USD460,512 in cost savings for spray as compared to spraying the entire city every week
 - While there are still a few human cases, but knowing this now will help us prepare for severe illnesses ahead of time
 
 ## Limitations
