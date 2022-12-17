@@ -16,19 +16,19 @@ To build a model with more than 70% recall to predict the period and location wh
 
 ## Content
 
-- [Part 1: Data Cleaning](Part_1_WNV_Cleaning.ipynb)
-- [Part 2: Exploratory Data Analysis](Part_2_WNV_EDA.ipynb)
-- [Part 3: Modeling & Tuning](Part_3_WNV_Modeling.ipynb)
-- [Part 4: Cost-Benefit Analysis & Conclusion](Part_4_WNV_CBA_Conclusion.ipynb)
+- [Part 1: Data Cleaning](./code/Part_1_WNV_Cleaning.ipynb)
+- [Part 2: Exploratory Data Analysis](./code/Part_2_WNV_EDA.ipynb)
+- [Part 3: Modeling & Tuning](./code/Part_3_WNV_Modeling.ipynb)
+- [Part 4: Cost-Benefit Analysis & Conclusion](./code/Part_4_WNV_CBA_Conclusion.ipynb)
 
 
 ## About the datasets
 
-- [`train.csv`](../assets/train.csv): This is the main dataset we'll be working with, which contains 10,506 observations on the presence of West Nile Virus across neighborhood clusters in Chicago, Illinois. This dataset is taken from the years 2007, 2009, 2011 and 2013. There are a total of 11 variables involved in tracking the West Nile Virus in the neighborhoods.
-- [`test.csv`](../assets/test.csv): There's a total of 11 features and 116,293 observations for the years 2008, 2010, 2012 and 2014. The presence of West Nile Virus is missing from this set, which we will use our model to predict. 
-- [`spray.csv`](../assets/spray.csv): This dataset contains 14,835 geographic information system (GIS) data on the city's spraying efforts in 2011 and 2013 - including the date, time, latitude and longitude.
--  [`weather.csv`](../assets/weather.csv): This dataset contains weather information from 2007 to 2014 - covering 2,944 observations across 22 relevant weather-related variables. 
-- [`mapdata_copyright_openstreetmap_contributors.txt`](../assets/mapdata_copyright_openstreetmap_contributors.txt): Map files from Open Streetmap and used for visualizations in the analysis. 
+- [`train.csv`](./assets/train.csv): This is the main dataset we'll be working with, which contains 10,506 observations on the presence of West Nile Virus across neighborhood clusters in Chicago, Illinois. This dataset is taken from the years 2007, 2009, 2011 and 2013. There are a total of 11 variables involved in tracking the West Nile Virus in the neighborhoods.
+- [`test.csv`](./assets/test.csv): There's a total of 11 features and 116,293 observations for the years 2008, 2010, 2012 and 2014. The presence of West Nile Virus is missing from this set, which we will use our model to predict. 
+- [`spray.csv`](./assets/spray.csv): This dataset contains 14,835 geographic information system (GIS) data on the city's spraying efforts in 2011 and 2013 - including the date, time, latitude and longitude.
+-  [`weather.csv`](./assets/weather.csv): This dataset contains weather information from 2007 to 2014 - covering 2,944 observations across 22 relevant weather-related variables. 
+- [`mapdata_copyright_openstreetmap_contributors.txt`](./assets/mapdata_copyright_openstreetmap_contributors.txt): Map files from Open Streetmap and used for visualizations in the analysis. 
 
 ## Data Dictionary
 
