@@ -88,7 +88,19 @@ We've also uploaded the predicted West Nile Virus presence on [Kaggle](https://w
 
 ## Initial Findings
 
-[insert 5-8 key takeaways from EDA]
+1. The main mosquito species carrying WNV are CULEX PIPIENS and CULEX RESTUANS. They form 90% of the infected mosquitoes collected.
+2. The overall mosquito population will peak during summer and decreases in the subsequent weeks as the weather cools.
+3. There is a lag time from the start of the summer season when mosquito population peaks to when first cases of infected mosquitoes are detected.
+4. At higher temperature coupled with higher dew point, wet bulb and humidity readings, we saw more infected mosquitoes. 
+5. Meanwhile, there are more infected mosquitoes present when there’s lower wind speed and lower rainfall - these conditions make it easier for their mobility and growth.
+6. When it comes to spraying efforts, the 2011 efforts were done towards the end of summer, which did not have an impact on the mosquito count and WNV presence.
+7. However in 2013, spraying was done more often from mid-season and we can see that there is some impact on the mosquito count and virus presence. However the effect does take a while to work, suggesting that the spraying efforts should be done earlier.
+8. We were able to identify several WNV hot spots over the years:
+    - 2007: South Doty Avenue
+    - 2009: O'Hare International Airport and South Kedzie Avenue
+    - 2011: O'Hare International Airport
+    - 2013: O'Hare International Airport
+9. Seeing that the hot spots were mostly concentrated around the airport area, we noticed the spraying efforts were mostly done in the north side (closer to the airport) in 2011 and 2013.
 
 ## Modeling Results
 
