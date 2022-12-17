@@ -122,17 +122,17 @@ Recall = 0.73
 ## Cost-Benefit Analysis
 
 We proposed three potential approach for spraying efforts, below is a summary:
-- **Option 1: Spray all** 
+- **Option 1: Spray all city area on a weekly basis** 
     - Spraying all areas in Chicago limits us from identifying the regions with hot spots accurately after the operation completes.
     - It's more harmful for the environment with the frequent spraying and may also irritate residents with sensitive skin and sense of smell
     - Even with this approach, there are still risks of positive cases so this approach will not guarantee that the city will be free of WNV - in fact, it could lead to the city wasting more resources.
-- **Option 2: No spray**
+- **Option 2: No spray at all**
     - When we choose not to spray at all, there is a much higher risk of people contracting WNV as it's one of the more widespread adult mosquito control measure.
     - Hence this would lead to higher hospitalization cost and productivity loss - our analysis shows that the city risks losing up to USD5,681,655.
-- **Option 3: Targeted spray**
+- **Option 3: Targeted spray in 3-4 neighborhoods per week**
     - This appears to be the best approach as it's the lowest in spraying cost.
     - This helps minimize environmental impact from spraying and also reduce harm to the residents.
-    - Furthermore, this approach demonstrate the benefits in cost savings of **USD440,459** for spray, when compared to Option 1
+    - Furthermore, this approach demonstrate the benefits in cost savings of **USD460,512** for spray, when compared to Option 1
 
 Hence, we would recommend pursuing the targeted spraying approach:
 - USD766,280 in total cost for spraying as well as medical costs and productivity loss
