@@ -154,7 +154,7 @@ There were several limitations in the model's ability to predict or classify the
 
 In summary, our model was able to:
 1. Achieve target recall more than 70%: Model's recall is 73% through the Logistic Regression Classifier 
-2. This allowed us to optimize a targeted spraying approach to save **USD440,459** in spraying efforts
+2. This allowed us to optimize a targeted spraying approach to save **USD460,512** in spraying efforts
 
 ## Recommendations
 
