@@ -84,8 +84,6 @@ For this project, we've conducted a thorough analysis and modelling through thes
 4. **Data Modeling & Evaluation**: Based on the selected features, we modeled them through these classification models - Histogram-Based Gradient Boosting Classifier, Logistic Regression, KNeighbors Classifier and Adaptive Boosting Classifier. The best model will then be used to predict the presence of West Nile Virus in the test dataset. 
 5. **Cost-Benefit Analysis**: Following the best model selected, we also conducted a cost-benefit analysis on annual cost of pesticide coverage and its benefits - particularly for areas that are at higher risk.
 
-We've also uploaded the predicted West Nile Virus presence on [Kaggle](https://www.kaggle.com/competitions/predict-west-nile-virus/data) to measure the accuracy of our finalized model.
-
 ## Initial Findings
 
 1. The main mosquito species carrying WNV are CULEX PIPIENS and CULEX RESTUANS. They form 90% of the infected mosquitoes collected.
@@ -124,7 +122,7 @@ Recall = 0.73
 We proposed three potential approach for spraying efforts, below is a summary:
 - **Option 1: Spray all city area on a weekly basis** 
     - Spraying all areas in Chicago limits us from identifying the regions with hot spots accurately after the operation completes.
-    - It's more harmful for the environment with the frequent spraying and may also irritate residents with sensitive skin and sense of smell
+    - It's more harmful for the environment with the frequent spraying and may also irritate residents with sensitive skin and sense of smell.
     - Even with this approach, there are still risks of positive cases so this approach will not guarantee that the city will be free of WNV - in fact, it could lead to the city wasting more resources.
 - **Option 2: No spray at all**
     - When we choose not to spray at all, there is a much higher risk of people contracting WNV as it's one of the more widespread adult mosquito control measure.
@@ -132,7 +130,7 @@ We proposed three potential approach for spraying efforts, below is a summary:
 - **Option 3: Targeted spray in 3-4 neighborhoods per week**
     - This appears to be the best approach as it's the lowest in spraying cost.
     - This helps minimize environmental impact from spraying and also reduce harm to the residents.
-    - Furthermore, this approach demonstrate the benefits in cost savings of **USD460,512** for spray, when compared to Option 1
+    - Furthermore, this approach demonstrate the benefits in cost savings of **USD460,512** for spray, when compared to Option 1.
 
 Hence, we would recommend pursuing the targeted spraying approach:
 - USD746,227 in total cost for spraying as well as medical costs and productivity loss
@@ -169,9 +167,9 @@ However on top of our model, controlling mosquito population and curbing virus t
 6. **Creating alerts in neighborhoods**: Similar to how Singapore keep residents informed of dengue cases, Chicago neighborhoods can consider alerting local residents whenever WNV is detected. This can be done with a flyer on notice board or text alert that indicates active WNV virus in the community. 
 
 The quest to improve the recall and accuracy of our WNV virus detection model is an ongoing one, which we can achieve by:
-1. Keeping closer track of spray data from the last few years.
-2. Including other variables, such as human cases and dead bird cases.
-3. Using local neighborhood's weather data for higher location accuracy. 
+1. Keeping closer track of spray data from the last few years
+2. Including other variables, such as human cases and dead bird cases
+3. Using local neighborhood's weather data for higher location accuracy
 
 ## Additional References
 
