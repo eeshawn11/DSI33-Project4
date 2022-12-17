@@ -77,7 +77,7 @@ To build a model with more than 70% recall to predict the period and location wh
 
 ## Methodology
 
-For this project, we've conducted a thorough analysis and modeling through these steps:
+For this project, we've conducted a thorough analysis and modelling through these steps:
 1. **Data Cleaning**: We assessed the training dataset for any outliers and removed them immediately. We also checked for missing values where we've filled them or removed them if irrelevant.
 2. **Exploratory Data Analysis**: We visualized the dataset through a series of graphs and plots to better understand the relationships between variables as well as its individual impact the spread of the West Nile Virus.
 3. **Feature Engineering & Data Preprocessing**: After evaluating specific variables, we removed variables that didn't have much impact and combined variables that were relevant to each other.
@@ -92,20 +92,33 @@ We've also uploaded the predicted West Nile Virus presence on [Kaggle](https://w
 
 ## Modeling Results
 
-[insert summary of results]
+**Summary of Model Performance**
+
+| Model                          | Train Score | Test Score | Score Delta |
+|--------------------------------|:-----------:|:----------:|:-----------:|
+| LogisticRegression             | 0.8434      | 0.7809     | 0.0626      |
+| KNeighborsClassifier           | 0.9605      | 0.7771     | 0.1834      |
+| AdaBoostClassifier             | 0.8724      | 0.7954     | 0.0770      |
+| HistGradientBoostingClassifier | 0.9210      | 0.8134     | 0.1077      |
+
+Based on the selected features, the **Logistic Regression** model had the best overall performance after taking into account the generalizability of the model with unseen datasets.
+
+![Confusion Matrix](./assets/images/model_confusion_matrix.png)
+
+Recall = 0.73
     
 ## Cost-Benefit Analysis
 
 We proposed three potential approach for spraying efforts, below is a summary:
 - **Option 1: Spray all** 
-    - Spraying all areas in Chicago limits us from identifying the regions with hot spots accurately after the operation completes. 
+    - Spraying all areas in Chicago limits us from identifying the regions with hot spots accurately after the operation completes.
     - It's more harmful for the environment with the frequent spraying and may also irritate residents with sensitive skin and sense of smell
-    - Even with this approach, there are still risks of positive cases so this approach will not guarantee that the city will be free of WNV - in fact, it could lead to the city wasting more resources. 
-- **Option 2: No spray** 
-    - When we choose not to spray at all, there is a much higher risk of people contracting WNV as it's one of the more widespread adult mosquito control measure. 
-    - Hence this would lead to higher hospitalization cost and productivity loss - our analysis shows that the city risks losing up to USD5,681,655. 
-- **Option 3: Targeted spray** 
-    - This appears to be the best approach as it's the lowest in spraying cost. 
+    - Even with this approach, there are still risks of positive cases so this approach will not guarantee that the city will be free of WNV - in fact, it could lead to the city wasting more resources.
+- **Option 2: No spray**
+    - When we choose not to spray at all, there is a much higher risk of people contracting WNV as it's one of the more widespread adult mosquito control measure.
+    - Hence this would lead to higher hospitalization cost and productivity loss - our analysis shows that the city risks losing up to USD5,681,655.
+- **Option 3: Targeted spray**
+    - This appears to be the best approach as it's the lowest in spraying cost.
     - This helps minimize environmental impact from spraying and also reduce harm to the residents.
     - Furthermore, this approach demonstrate the benefits in cost savings of **USD440,459** for spray, when compared to Option 1
 
@@ -128,7 +141,7 @@ There were several limitations in the model's ability to predict or classify the
 ## Conclusion
 
 In summary, our model was able to:
-1. Achieve target recall more than 70%: Model's recall is 72% through the Adaptive Boosting Classifier 
+1. Achieve target recall more than 70%: Model's recall is 73% through the Logistic Regression Classifier 
 2. This allowed us to optimize a targeted spraying approach to save **USD440,459** in spraying efforts
 
 ## Recommendations
